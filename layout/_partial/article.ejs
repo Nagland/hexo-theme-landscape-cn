@@ -11,7 +11,11 @@
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
+
+      <% if(post.description && index){ %>
+     <p itemprop="description" ><%- post.description %></p>
+
+      <% } else if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
           <p class="article-more-link">
