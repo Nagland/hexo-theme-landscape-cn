@@ -2,6 +2,8 @@
 menu:
   Home: /
   Archives: /archives
+
+
 rss: /atom.xml
 
 # Content
@@ -13,13 +15,13 @@ sidebar: right
 widgets:
 - category
 - tag
-- tagcloud
-- archive
-- recent_posts
+- friendlink
+
+duoshuo: stackbox
 
 # Miscellaneous
 google_analytics:
-favicon: /favicon.png
+favicon: /favicon.ico?v=1
 twitter:
 google_plus:
 fb_admins:

@@ -3,9 +3,22 @@
     <%- partial('_partial/sidebar') %>
   <% } %>
   <div class="outer">
+
+
     <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <style type="text/css">
+       #ds-recent-visitors .ds-avatar {
+        float: left;
+    </style>
+    <ul class="ds-recent-visitors" data-num-items="31"></ul>
+    </div>
+
+    <div id="footer-info" class="inner">
+      书阁自锁 七曜圣贤 <br/>
+      &copy; <%= date(new Date(), 'YYYY') %>  <a href=""/><%= config.author || config.title %></a>  | |
+      <a href="/sitemap.xml">Sitemap</a><br>
+    
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> | Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> | Theme <a href="https://github.com/Nagland/hexo-theme-landscape-cn" target="_blank">landscape-cn</a>, by SRK.Lyu, based on Landscape.
     </div>
   </div>
 </footer>
