@@ -12,6 +12,8 @@
     <% } %>
     <div class="article-entry" itemprop="articleBody">
 
+
+
       <% if(post.description && index){ %>
      <p itemprop="description" ><%- post.description %></p>
 
@@ -23,7 +25,7 @@
           </p>
         <% } %>
       <% } else { %>
-      
+
         <!-- Table of Contents -->
         <% if (!index && post.toc){ %>
           <div id="toc" class="toc-article">
@@ -33,6 +35,13 @@
         <% } %>
 
         <%- post.content %>
+
+        <hr/>
+
+        <p>声明: 本文 “<%- post.title %>” 采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 协议进行授权.<br>
+        转载请注明原文地址: <a href="<%- url %>" target="_blank" rel="external"><%- url %></a>
+        </p>
+
       <% } %>
     </div>
     <footer class="article-footer">
