@@ -1,40 +1,38 @@
 <% if (config.disqus_shortname){ %>
+
+<!--
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
   <% if (page.permalink){ %>
   var disqus_url = '<%= page.permalink %>';
   <% } %>
   (function(){
+
+    <% if (page.comments) { %>
+
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+    <% } %>
+
   })();
 </script>
+-->
 <% } %>
 
 <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 
 <% if (theme.fancybox){ %>
-  <%- css('fancybox/jquery.fancybox') %>
-  <%- js('fancybox/jquery.fancybox.pack') %>
+
+  <link rel="stylesheet" href="http://libs.useso.com/js/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css">
+  <script src="http://libs.useso.com/js/fancybox/2.1.5/jquery.fancybox.pack.js" type="text/javascript" />
 <% } %>
 
 <%- js('js/script') %>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"<%= theme.duoshuo %>"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
 <!-- 多说公共JS代码 end -->
 
 <% if (page.mathjax){ %>
@@ -43,5 +41,5 @@ var duoshuoQuery = {short_name:"<%= theme.duoshuo %>"};
 
 
 <div style="display:none">
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000520831'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1000520831' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript" async="async">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000520831'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1000520831' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
