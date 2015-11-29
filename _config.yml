@@ -15,10 +15,11 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+
+- category
 - tagcloud
-- tag
 - friendlink
-- github
+
 
 duoshuo: stackbox
 
