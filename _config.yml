@@ -1,8 +1,7 @@
 # Header
 menu:
   Home: /
-  Archives: /archives/
-  Notes: /note/
+  Gallery: /gallery/
   About: /about/
 
 
@@ -19,6 +18,8 @@ widgets:
 - category
 - tagcloud
 - friendlink
+
+
 
 
 duoshuo: stackbox
