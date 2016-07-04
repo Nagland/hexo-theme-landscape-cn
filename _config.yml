@@ -2,7 +2,7 @@
 menu:
   Home: /
   Archives: /archives/
-  Gallery: /gallery/
+  Notebook: http://nbviewer.jupyter.org/github/superalsrk/notebook/blob/master/index.ipynb
   About: /about/
 
 
